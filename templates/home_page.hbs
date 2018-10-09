@@ -1,0 +1,86 @@
+
+<section class="section hero">
+  <div class="header-hero">
+    <div class="logo">
+      {{#link 'help_center'}}
+        <img src="{{settings.logo}}" alt="{{t 'logo'}}">
+      {{/link}}
+    </div>
+    <div class="nav-wrapper">
+      <span class="icon-menu"></span>
+      <nav class="user-nav" id="user-nav">
+        <a href="//www.bline.ie">Bline.ie homepage</a>
+        <a href="//www.bline.ie/portal">Broker Login</a>
+      </nav>
+    </div>
+  </div>
+  
+  
+  <div class="hero-inner">
+    {{search submit=false instant=true class='search search-full'}}
+  </div>
+</section>
+
+<div class="container">
+  <section class="section knowledge-base">
+    <section class="categories blocks">
+      <div class="breakout icon-bar">
+  <div class="icon-bar__inner">
+    
+  <a href="https://answers.bline.ie/hc/en-us/categories/360000446071-Protection" class="icon-box__link">
+    <div class="icon-box">
+    <svg class="icon-box__icon" >
+      <use xlink:href="#lock" />
+    </svg>
+      <p class="h2 icon-box__text">Protection</p>
+    </div>
+  </a>
+	
+<a href="https://answers.bline.ie/hc/en-us/categories/360000446051-Pensions" class="icon-box__link">
+  <div class="icon-box">
+    <svg class="icon-box__icon" >
+      <use xlink:href="#shield" />
+    </svg>
+    <p class="h2 icon-box__text">Pensions</p>
+  </div>
+</a>
+  </div>
+</div>
+      {{pagination}}
+    </section>
+
+    {{#if promoted_articles}}
+      <section class="articles">
+        <h3>{{t 'promoted_articles'}}</h3>
+        <ul class="article-list promoted-articles">
+          {{#each promoted_articles}}
+            <li class="promoted-articles-item">
+              <a href="{{url}}">
+                {{title}}
+              </a>
+            </li>
+          {{/each}}
+        </ul>
+      </section>
+    {{/if}}
+  </section>
+
+  <section class="section activity">
+    {{recent_activity}}
+  </section>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<symbol  id="lock" viewBox="0 0 24 24">
+  <path d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"></path></symbol>
+  <symbol id="shield" viewBox="0 0 24 24">
+  <path d="M23,12L20.56,9.22L20.9,5.54L17.29,4.72L15.4,1.54L12,3L8.6,1.54L6.71,4.72L3.1,5.53L3.44,9.21L1,12L3.44,14.78L3.1,18.47L6.71,19.29L8.6,22.47L12,21L15.4,22.46L17.29,19.28L20.9,18.46L20.56,14.78L23,12M13,17H11V15H13V17M13,13H11V7H13V13Z"></path>
+</symbol>
+  <symbol id="chart" viewBox="0 0 24 24">
+  <path d="M17.45,15.18L22,7.31V19L22,21H2V3H4V15.54L9.5,6L16,9.78L20.24,2.45L21.97,3.45L16.74,12.5L10.23,8.75L4.31,19H6.57L10.96,11.44L17.45,15.18Z"></path>
+</symbol>
+<symbol id="man" viewBox="0 0 24 24">
+		<path d="M20.5 6c-2.61.7-5.67 1-8.5 1s-5.89-.3-8.5-1L3 8c1.86.5 4 .83 6 1v13h2v-6h2v6h2V9c2-.17 4.14-.5 6-1l-.5-2zM12 6c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>
+</symbol>
+</svg>
+
+
