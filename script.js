@@ -84,7 +84,7 @@ $(document).ready(function() {
     });
   }
 
-  $(".header .icon-menu").on("click", function(e) {
+  $(".icon-menu").on("click", function(e) {
     e.stopPropagation();
     var menu = document.getElementById("user-nav");
     var isExpanded = menu.getAttribute("aria-expanded") === "true";
@@ -106,4 +106,12 @@ $(document).ready(function() {
     var isExpanded = this.getAttribute("aria-expanded") === "true";
     this.setAttribute("aria-expanded", !isExpanded);
   });
+  
+  function attachClass() {
+    if(document.getElementsByClassName("recent-activity-controls").length >= 1) {
+    	var button = document.getElementsByClassName("recent-activity-controls")[0].firstElementChild;
+    	$(button).addClass("jbtn jbtn-cta");
+    }
+  }
+  attachClass();
 });
